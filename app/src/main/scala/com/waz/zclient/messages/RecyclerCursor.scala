@@ -94,7 +94,7 @@ class RecyclerCursor(val conv: ConvId, zms: ZMessaging, val adapter: RecyclerNot
     verbose(s"notifyFromHistory($time)")
 
     history.foreach { _.updates foreach { case (prev, current) => window.onUpdated(prev, current) } }
-    history = history.filter(_.time.isAfter(time.toRemote(ZMessaging.currentBeDrift))) // leave only updates which happened after current cursor was loaded
+    history = history.filter(_.time.isAfter(time)) // leave only updates which happened after current cursor was loaded
   }
 
   private def onUpdated(prev: MessageAndLikes, current: MessageAndLikes): Unit =
