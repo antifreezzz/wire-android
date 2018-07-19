@@ -1434,4 +1434,5 @@
     <string name="markdown_link_dialog_message">This will take you to\n%1$s</string>
     <string name="markdown_link_dialog_confirmation">OK</string>
     <string name="markdown_link_dialog_cancel">CANCEL</string>
+    <string name="sso_signin_button">Company log in</string>
 </resources>
